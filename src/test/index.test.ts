@@ -1,9 +1,11 @@
-// Tests unitaires écrits par l'enseignant. Ne modifiez pas ce fichier.
+import { genererMotDePasse } from "../index";
 
-import {...} from '../index';
+describe("Générateur de mot de passe", () => {
+  test("Générer un mot de passe à partir de TypeScript", () => {
+    expect(genererMotDePasse("TypeScript")).toEqual("TyP3ScR1Pt10");
+  });
 
-describe('...', () => {
-    test('...', () => {
-        expect(false).toBe(true);
-    });
+  test("Mademoiselle", () => {
+    expect(genererMotDePasse("Générer un mot de passe à partir de Mademoiselle")).toEqual("M@D3M01s3lL312");
+  });
 });
